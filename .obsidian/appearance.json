@@ -1,0 +1,11 @@
+{
+  "accentColor": "#e6e6e6",
+  "theme": "moonstone",
+  "cssTheme": "GitHub Theme",
+  "interfaceFontFamily": "微软雅黑",
+  "textFontFamily": "微软雅黑",
+  "monospaceFontFamily": "Consolas",
+  "baseFontSize": 16,
+  "nativeMenus": true,
+  "translucency": false
+}

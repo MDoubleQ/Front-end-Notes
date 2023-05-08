@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "cffd56d01320f79f",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ea712daffe82678",
+        "type": "tabs",
+        "dimension": 32.74695534506089,
+        "children": [
+          {
+            "id": "3f2c39ddf32fffcf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "FrontEnd 知识卡片/09、手写代码.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "e5a313d7c9044393",
+        "type": "tabs",
+        "dimension": 67.2530446549391,
+        "children": [
+          {
+            "id": "1c1fd282a5aa1982",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9c06e616c38a849c",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a0e88cc50db8269",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df792af9ef752de9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6329934b161f4953",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ee7a9c1c22952f93",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231.5
+  },
+  "right": {
+    "id": "618886454cad85f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e561a3be0d9c35b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ecfd0ebbbb62d286",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d0803feb6ff17e3b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d7d0764e53021391",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 348.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "1c1fd282a5aa1982",
+  "lastOpenFiles": [
+    "FrontEnd 知识卡片/04、JavaScript（高级）.md",
+    "FrontEnd 知识卡片/09、手写代码.md",
+    "FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript设计模式.md",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/设计模式笔记.md",
+    "FrontEnd 文章收集/二、JavaScript/JavaScript设计模式.md",
+    "FrontEnd 文章收集/二、JavaScript/新建 Markdown.md",
+    "FrontEnd 文章收集/二、JavaScript/ES6~ES12的常用新特性.md",
+    "FrontEnd 读书笔记/001、javaScript高级程序设计（第四版）——马特·弗里斯比/javaScript高级程序设计（第四版）.md",
+    "FrontEnd 知识卡片/01、HTML.md",
+    "FrontEnd 文章收集/四、工程化/从零做一个前端开源项目.md",
+    "FrontEnd 文章收集/二、JavaScript/常用正则表达式.md",
+    "FrontEnd 文章收集/二、JavaScript/帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（六）之 this.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（二）之 数据结构.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（二） 之 数据结构.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（一）之 类型转换.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（三）之 函数执行过程.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（四）之 闭包与作用域.md",
+    "FrontEnd 文章收集/二、JavaScript/Untitled.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八）之 继承.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（七）之 原型链.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八） 之 继承.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八） 之继承.md",
+    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（五）之 立即执行函数与闭包.md",
+    "FrontEnd 文章收集/四、工程化",
+    "FrontEnd 文章收集/工程化",
+    "FrontEnd 文章收集/Untitled Folder",
+    "FrontEnd 文章收集/三、Vue",
+    "FrontEnd 文章收集/二、JavaScript",
+    "FrontEnd 文章收集/一、学习方法论",
+    "FrontEnd 文章收集/JavaScript",
+    "FrontEnd 文章收集/学习方法论",
+    "Pasted image 20230507115240.png",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv_img.jpeg",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv.png",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie_img.jpeg",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie.png",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_meng_img.jpg",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_meng.png",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_lol_img.jpeg",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_lol.png",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_comic_img.jpeg",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/lib/event.js",
+    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/lib/dom.js",
+    "未命名.canvas"
+  ]
+}
