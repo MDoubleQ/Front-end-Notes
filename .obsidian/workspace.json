@@ -4,34 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8ea712daffe82678",
+        "id": "cb97ffffe28ef40f",
         "type": "tabs",
-        "dimension": 32.74695534506089,
         "children": [
           {
-            "id": "3f2c39ddf32fffcf",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "FrontEnd 知识卡片/09、手写代码.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "e5a313d7c9044393",
-        "type": "tabs",
-        "dimension": 67.2530446549391,
-        "children": [
-          {
-            "id": "1c1fd282a5aa1982",
+            "id": "08f7dbd11ca08f34",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
                 "mode": "preview",
                 "source": false
               }
@@ -87,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5
+    "width": 345.51103591918945
   },
   "right": {
     "id": "618886454cad85f2",
@@ -103,13 +85,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -120,9 +102,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FrontEnd 知识卡片/09、手写代码.md",
+                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -136,14 +118,23 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "fc11e861c557adf4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 348.5,
-    "collapsed": true
+    "width": 278.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -152,57 +143,57 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "1c1fd282a5aa1982",
+  "active": "08f7dbd11ca08f34",
   "lastOpenFiles": [
-    "FrontEnd 知识卡片/04、JavaScript（高级）.md",
-    "FrontEnd 知识卡片/09、手写代码.md",
-    "FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript设计模式.md",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/设计模式笔记.md",
-    "FrontEnd 文章收集/二、JavaScript/JavaScript设计模式.md",
-    "FrontEnd 文章收集/二、JavaScript/新建 Markdown.md",
-    "FrontEnd 文章收集/二、JavaScript/ES6~ES12的常用新特性.md",
-    "FrontEnd 读书笔记/001、javaScript高级程序设计（第四版）——马特·弗里斯比/javaScript高级程序设计（第四版）.md",
-    "FrontEnd 知识卡片/01、HTML.md",
-    "FrontEnd 文章收集/四、工程化/从零做一个前端开源项目.md",
-    "FrontEnd 文章收集/二、JavaScript/常用正则表达式.md",
-    "FrontEnd 文章收集/二、JavaScript/帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（六）之 this.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（二）之 数据结构.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（二） 之 数据结构.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（一）之 类型转换.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（三）之 函数执行过程.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（四）之 闭包与作用域.md",
-    "FrontEnd 文章收集/二、JavaScript/Untitled.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八）之 继承.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（七）之 原型链.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八） 之 继承.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（八） 之继承.md",
-    "FrontEnd 文章收集/二、JavaScript/进击的 JavaScript（五）之 立即执行函数与闭包.md",
-    "FrontEnd 文章收集/四、工程化",
-    "FrontEnd 文章收集/工程化",
-    "FrontEnd 文章收集/Untitled Folder",
-    "FrontEnd 文章收集/三、Vue",
-    "FrontEnd 文章收集/二、JavaScript",
-    "FrontEnd 文章收集/一、学习方法论",
-    "FrontEnd 文章收集/JavaScript",
-    "FrontEnd 文章收集/学习方法论",
-    "Pasted image 20230507115240.png",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv_img.jpeg",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv.png",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie_img.jpeg",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie.png",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_meng_img.jpg",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_meng.png",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_lol_img.jpeg",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_lol.png",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_comic_img.jpeg",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/lib/event.js",
-    "FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/lib/dom.js",
-    "未命名.canvas"
+    "阶段系统学习内容.md",
+    "FrontEnd 阶段学习内容~4235C.tmp",
+    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript设计模式es6（23种).md",
+    "系统内容.md",
+    "Untitled.md",
+    "FrontEnd 阶段学习内容~E2703.tmp",
+    "FrontEnd 阶段学习内容~5F9FE.tmp",
+    "~$FrontEnd 阶段学习内容.xlsx",
+    "🌐FrontEnd 文章收集/02、JavaScript/关于JavaScript.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
+    "🌐FrontEnd 文章收集/000、Recording.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/Untitled.md",
+    "💡FrontEnd 知识卡片/03、JavaScript（基础）.md",
+    "Excalidraw/Drawing 2023-05-13 15.30.15.excalidraw.md",
+    "Excalidraw",
+    "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
+    "🔲FrontEnd WhiteBored/堆内存、栈内存.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 命名约定最佳实践.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 开发的45个经典技巧.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 28个常用字符串方法及使用技巧_掘金_CUGGZ.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/理解constructor、prototype、__proto__和原型链.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/javascript-Pattern-master.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/README.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson06-skill_pattern/img/weibo.jpg",
+    "📑FrontEnd 其他资料/掘金小册（前端小册+后端小册）/前端小册/Web 前端面试指南与高频考题解析/1一面 1：ES 基础知识点与高频考题解析.md",
+    "FrontEnd 阶段学习内容~2C310.tmp",
+    "🌐FrontEnd 文章收集/02、JavaScript/深度揭秘 Promise 微任务注册和执行过程.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/这一次，彻底弄懂 JavaScript 执行机制.md",
+    "📑FrontEnd 其他资料/掘金小册（前端小册+后端小册）/前端小册/剖析 Vue.js 内部运行机制/Vuex 状态管理的工作原理.md",
+    "FrontEnd 阶段学习内容.md",
+    "FrontEnd 阶段学习内容~E3B52.tmp",
+    "新建 Markdown.md",
+    "FrontEnd 阶段学习内容~C72A0.tmp",
+    "FrontEnd 阶段学习内容.xlsx",
+    "FrontEnd 阶段记录.xlsx",
+    "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.assets/image-20221031101039497.png",
+    "📑FrontEnd 其他资料/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
+    "0d3e16f4197fd5e33adaa.png",
+    "🟨FrontEnd WhiteBored/Untitled Diagram.svg",
+    "未命名.canvas",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv_img.jpeg",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv.png",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie_img.jpeg",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie.png"
   ]
 }

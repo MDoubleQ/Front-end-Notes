@@ -10,5 +10,6 @@
     "downscalePercent": 100
   },
   "attachmentFolderPath": "",
-  "promptDelete": true
+  "promptDelete": true,
+  "defaultViewMode": "preview"
 }
