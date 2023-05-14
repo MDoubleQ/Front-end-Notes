@@ -12,21 +12,127 @@
 
 ## 七项基本原则
 
+https://pattern.windliang.wang/posts/%E5%89%8D%E7%AB%AF%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99.html
+
 设计一些设计模式时，一般遵循如下七项基本原则。
 
-1. 单一职责原则 (Single Responsibility Principle)
-2. 开放-关闭原则 (Open-Closed Principle)
-3. 里氏替换原则 (Liskov Substitution Principle)
-4. 依赖倒转原则 (Dependence Inversion Principle)
-5. 接口隔离原则 (Interface Segregation Principle)
-6. 最少知道原则（The Least Knowledge Principle）
-7. 组合/聚合复用原则 (Composite/Aggregate Reuse Principle)
+二十三个经典的 [设计模式 (opens new window)](https://pattern.windliang.wang/)已经过完了 ，这里再把一些基本原则过一下，以便平时开发中可以更好的体会。
 
-这些原则里，我认为比较实用而且很重要的是：
+### 单一职责原则 SRP(Single Responsibility Principle)
 
-- 单一职责原则、
-- 开放-关闭原则、
-- 最少知道原则。
+> There should never be more than one reason for a class to change." In other words, every class should have only one responsibility.
+
+定义：一个类或者模块应该有且只有一个改变的原因，在 `js` 中的话更多的会应用在对象、函数中。
+
+最难的地方就在于结合具体场景对单一职责的判定了，为了应用这个原则把一个模块拆的太细其实也不太好，所以需要我们在方便性和稳定性之间做一个权衡。
+
+之前讲的 [代理模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-代理模式.html)、[装饰器模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-装饰器模式.html)都有体现。
+
+### 开闭原则 OCP(open–closed principle)
+
+> Software entities should be open for extension, but closed for modification.
+
+定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。模块应尽量在不修改原代码的情况下进行扩展。
+
+平常开发中，要把变的部分和不变的部分分离出来，设计一个结构的时候尽可能的考虑一下未来可能变化的部分。
+
+可以通过放置 `hook` 、使用回调函数的方式达到扩展的目的。
+
+之前讲的 [发布订阅模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-发布订阅模式.html)、[模版方法模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-模版模式.html)、[策略模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-策略模式.html)、[职责链模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-责任链模式.html)都有体现。
+
+### 里氏替换原则 LSP(Liskov substitution principle)
+
+> Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+
+定义：所有引用基类的地方必须能透明地使用其子类的对象，也可以简单理解为任何基类可以出现的地方，子类一定可以出现。
+
+举个例子就是如果某个地方可以用 `A` 类， `B` 类继承于 `A` 类，那么这个地方一定可以使用 `B` 类。
+
+这个原则告诉我们在继承类的时候，如果要实现一个新功能，不要去覆盖父类已经实现的方法，而应该去写一个新方法。
+
+平常前端开发中很少去写类和继承，这个原则用的比较少。
+
+### 接口隔离原则 ISP(Interface Segregation Principle)
+
+> Many client-specific interfaces are better than one general-purpose interface.
+
+定义：客户端不应该依赖它不需要的接口，类间的依赖关系应该建立在最小的接口上。简单来说就是建立单一的接口，不要建立臃肿庞大的接口。也就是接口尽量细化，同时接口中的方法尽量少。
+
+举个例子就是 `A` 接口有 `5` 个方法，`B` 类实现 `A` 接口，但 `B` 类只用到其中的 `3` 个方法，此时可以考虑对 `A` 接口进行拆分。
+
+`js` 中没有接口，忽略。
+
+### 依赖倒转原则 DIP(Dependency Inversion Principle)
+
+> Depend upon abstractions, not concretions
+
+定义： 程序要依赖于抽象接口，不要依赖于具体实现。简单的说就是要对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。
+
+其实就是经常说的面向接口（或者基类）编程。
+
+但 `js` 中没有接口和抽象类，这种原则也就用不到了。
+
+上边五个原则就是经常看到的 `SOLID` 原则，除了这些还有几个其他的原则。
+
+### 最小知道原则 LOD(principle of least knowledge)
+
+定义：一个软件实体应当尽可能少的与其他实体发生相互作用。每一个软件单位对其他的单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。
+
+实体的话在前端中更多的对应对象、函数，[门面模式 (opens new window)](https://pattern.windliang.wang/posts/前端的设计模式系列-外观模式.html)可以看作该原则的应用。
+
+最小知道原则又叫做迪米特法则 LOD(Law of Demeter)，迪米特其实是宙斯(Zeus) 的姐姐，名字来源的话这里截取下[维基百科 (opens new window)](https://en.wikipedia.org/wiki/Law_of_Demeter)。
+
+> *The Greek goddess of Agriculture.*
+>
+> The Demeter project was named after Demeter because we were working on a hardware description language Zeus and we were looking for a tool to simplify the implementation of Zeus. We were looking for a tool name related to Zeus and we chose a sister of Zeus: Demeter.
+>
+> Later we promoted the idea that Demeter-style software development is about growing software as opposed to building software. We introduced the concept of a growth plan which is basically a sequence of more and more complex UML class diagrams.
+>
+> Growth plans are useful for building systems incrementally.
+
+大意就是当时是用一个叫做 `Zeus` 的硬件语言，然后找到了一个优化 `Zens` 的工具，为了让它们产生联系，就起了 `Demeter` 这个名字。
+
+另外截取一下 「JavaScript 设计开发与实现」书里提到的关于两个名字之间的建议：
+
+> 许多人更倾向于使用迪米特法则这个名字，也许是因为显得更酷一点。但本书参考 *Head First*
+>
+> *Design Patterns* 的建议，称之为最少知识原则。一是因为这个名字更能体现其含义，另一个原因
+>
+> 是“法则”给人的感觉是必须强制遵守，而原则只是一种指导，没有哪条原则是在实际开发中必
+>
+> 须遵守的。比如，虽然遵守最小知识原则减少了对象之间的依赖，但也有可能增加一些庞大到难
+>
+> 以维护的第三者对象。跟单一职责原则一样，在实际开发中，是否选择让代码符合最少知识原则，
+>
+> 要根据具体的环境来定。
+
+#### 合成/聚合复用原则 CARP(Composite/Aggregate Reuse Principle)
+
+定义：尽量使用合成/聚合，而不是通过继承达到复用的目的。
+
+### 其他原则
+
+#### KISS 原则
+
+定义： Keep It Simple, Stupid，在设计中应当注重简约的原则。
+
+#### YAGNI 原则
+
+定义：You aren't gonna need it，表示暂时不需要的就不要做。
+
+#### DRY 原则
+
+定义：Don't Repeat Yourself，不要写重复的代码。
+
+#### 总
+
+所有的原则只是协助于我们写成易维护、易扩展的代码，不能为了去实现而实现、进行过度设计。
+
+一些代码如果未来完全不用改变，那就用最简单的方式实现即可，当第二次、第三次修改的时候再来重构也不迟。
+
+设计模式和基本原则的应用一定是结合具体场景的，空谈的话也没有任何意义。
+
+我们只需要先了解这些原则，然后在日常开发中慢慢进行体会。
 
 ## 本书设计模式的分类：
 
@@ -56,7 +162,7 @@
 
 而缺点也很明显，这本书的校验工作不甚认真，有很多代码有错误之处，另外很多代码示例省略了html页面相关的实现。
 
-所以——我抄书了！不过我不觉得抄书可耻，从学习编程的第一天，我就秉持着一个理念：学习过程中的所有代码，只有自己敲一遍，才算学过（甚至这样都只能达到基本理解而非学懂）。
+所以——我抄书了！不过我不觉得抄书可耻，从学习编程的第一天，我就秉持着一个理念：==学习过程中的所有代码，只有自己敲一遍，才算学过（甚至这样都只能达到基本理解而非学懂）。==
 
 本文下面对书中40种设计模式的总结，我还完成了书中所有代码示例的实现，对书中的错误进行了修正，补全了所有作者省略掉的代码，保证每一个示例都可以在node环境或者浏览器页面或者浏览器控制台可以看到演示效果。
 
@@ -64,8 +170,6 @@
 
 希望可以帮助到需要的同学。
 ## 开篇 从函数到对象
-
-> 从函数到对象
 
 本节课围绕实现一个验证用户输入的用户名、邮箱、密码的功能，从函数逐渐到对象，使用了多种不同方式去实现，并总结了各种方式的特点。
 
@@ -448,8 +552,6 @@ function checkForm() {
 
 ## 第一篇 面向对象基础
 
-> 面向对象编程基础
-
 ### 01：类的属性与方法封装
 
 私有属性（Private Properties）：在类内部使用 `var`、`let` 或 `const` 关键字定义的属性，无法通过类的实例对象或外部访问，仅在类的内部可见。
@@ -721,8 +823,6 @@ Book {
 
 
 ## 第二篇 创建型设计模式
-
-> 创建型设计模式
 
 ### 01-01：无工厂模式
 
@@ -1057,9 +1157,9 @@ loginPrompt.show(); //欢迎回来，请输入心情：there is buttons, there i
 - 建造者模式关注的是创建的过程，将复杂对象的构建过程与其表示分离，通过指导者和构造器来控制构建过程的顺序和细节。
 - 工厂模式关注的是创建的最终结果，提供一种通用的接口来创建对象实例或者类簇，隐藏了实例化的具体逻辑。
 
-假设我们要创建一个游戏角色对象，该角色有以下属性：姓名、职业、等级、武器、护甲。我们将使用建造者模式和工厂模式来创建该游戏角色对象。
-
 **1、建造者模式的例子：**
+
+> 假设我们要创建一个游戏角色对象，该角色有以下属性：姓名、职业、等级、武器、护甲。我们将使用建造者模式和工厂模式来创建该游戏角色对象。
 
 ```js
 // 角色类
@@ -1208,10 +1308,6 @@ const character = characterFactory.createCharacter('John', 'Warrior', 10, 'Sword
 ### ⭐05-01 构造函数继承基类
 
 构造函数继承是一种实现多种子类继承同一父类并创建不同类型对象的方式。它通过在子类构造函数中调用父类构造函数来实现继承，并可以重写父类的方法。
-
-```
-
-```
 
 缺点：每次子类继承都会执行一遍父类构造函数。如果父类的构造函数非常耗费资源，那么这种方式可能会造成性能问题。这主要是因为每个子类实例化时都要执行父类的构造函数，包括一些可能不需要的操作。
 
@@ -1415,20 +1511,294 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ## 第三篇 结构型设计模式
 
-> 结构型设计模式
+### ⭐01 外观模式
 
-### 01 外观模式
+外观模式是一种结构型设计模式，它提供了一个简化的接口，用于访问复杂子系统的一组接口。
 
-- 为一组复杂的子系统接口提供一个更高级的统一接口，通过这个接口使得对子系统接口的访问更容易。
-- 常见的应用为封装一个统一接口来实现不同浏览器的相同功能的兼容。
-- 外观模式的另一个作用：小型代码库中用来封装多个功能，简化底层操作方法
+外观模式的目标：通过创建一个高层接口，将子系统的复杂性隐藏起来，使得客户端可以更轻松地使用子系统。
+
+外观模式的主要思想：将一组复杂的子系统接口封装在一个外观对象中，客户端只需要与外观对象进行交互，而无需直接与子系统的各个接口进行交互。外观对象充当了客户端与子系统之间的中介，通过简化的接口提供了对子系统功能的访问。
+
+常见的应用场景：多个浏览器之间实现相同功能的兼容性。由于不同浏览器对于某些功能的实现方式不同，为了确保应用程序在各种浏览器中都能正常工作，可以使用外观模式来封装各个浏览器的差异性，提供一个统一的接口给应用程序使用。
+
+外观模式还可以在小型代码库中用来封装多个功能，简化底层操作方法。通过创建一个外观对象，将复杂的底层操作封装起来，对外部提供一个简单的接口，使得使用者可以更方便地使用这些功能。
+
+> 场景一：假设我们正在开发一个音频播放器应用程序。该应用程序需要与音频引擎、音频控制器和音频可视化组件等多个子系统进行交互。每个子系统都有自己的接口和复杂的实现逻辑。为了简化客户端与这些子系统的交互，我们可以使用外观模式。
+
+```js
+// 音频引擎子系统
+var AudioEngine = {
+  init: function() {
+    console.log('Initializing audio engine...');
+  },
+  play: function() {
+    console.log('Playing audio...');
+  },
+  pause: function() {
+    console.log('Pausing audio...');
+  },
+  stop: function() {
+    console.log('Stopping audio...');
+  }
+};
+
+// 音频控制器子系统
+var AudioController = {
+  volumeUp: function() {
+    console.log('Increasing volume...');
+  },
+  volumeDown: function() {
+    console.log('Decreasing volume...');
+  },
+  mute: function() {
+    console.log('Muting audio...');
+  }
+};
+
+// 音频可视化子系统
+var AudioVisualizer = {
+  visualize: function() {
+    console.log('Visualizing audio...');
+  }
+};
+
+// 外观对象
+var AudioPlayer = {
+  play: function() {
+    AudioEngine.init();
+    AudioEngine.play();
+    AudioVisualizer.visualize();
+  },
+  pause: function() {
+    AudioEngine.pause();
+  },
+  stop: function() {
+    AudioEngine.stop();
+  },
+  volumeUp: function() {
+    AudioController.volumeUp();
+  },
+  volumeDown: function() {
+    AudioController.volumeDown();
+  },
+  mute: function() {
+    AudioController.mute();
+  }
+};
+
+// 在应用程序中使用外观对象
+AudioPlayer.play(); // 输出:
+// Initializing audio engine...
+// Playing audio...
+// Visualizing audio...
+
+AudioPlayer.pause(); // 输出: Pausing audio...
+
+AudioPlayer.stop(); // 输出: Stopping audio...
+
+AudioPlayer.volumeUp(); // 输出: Increasing volume...
+
+AudioPlayer.mute(); // 输出: Muting audio...
+```
+
+在这个示例中，我们创建了一个外观对象`AudioPlayer`，它封装了音频引擎、音频控制器和音频可视化组件等多个子系统的复杂接口。客户端只需与`AudioPlayer`对象进行交互，无需了解每个子系统的具体实现细节。
+
+> 场景二：假设我们正在开发一个网络请求库，该库需要处理不同类型的请求（GET、POST、PUT、DELETE等）并与服务器进行通信。每种请求类型都有自己的配置和实现逻辑，包括设置请求头、处理请求参数、处理响应等。为了简化客户端与网络请求库的交互，我们可以使用外观模式。
+
+```js
+// GET请求子系统
+var GetRequest = {
+  send: function(url, options) {
+    // 发送GET请求的具体实现逻辑
+    console.log('Sending GET request to:', url);
+    console.log('Options:', options);
+  }
+};
+
+// POST请求子系统
+var PostRequest = {
+  send: function(url, options) {
+    // 发送POST请求的具体实现逻辑
+    console.log('Sending POST request to:', url);
+    console.log('Options:', options);
+  }
+};
+
+// PUT请求子系统
+var PutRequest = {
+  send: function(url, options) {
+    // 发送PUT请求的具体实现逻辑
+    console.log('Sending PUT request to:', url);
+    console.log('Options:', options);
+  }
+};
+
+// DELETE请求子系统
+var DeleteRequest = {
+  send: function(url, options) {
+    // 发送DELETE请求的具体实现逻辑
+    console.log('Sending DELETE request to:', url);
+    console.log('Options:', options);
+  }
+};
+
+// 外观对象
+var RequestFacade = {
+  get: function(url, options) {
+    GetRequest.send(url, options);
+  },
+  post: function(url, options) {
+    PostRequest.send(url, options);
+  },
+  put: function(url, options) {
+    PutRequest.send(url, options);
+  },
+  delete: function(url, options) {
+    DeleteRequest.send(url, options);
+  }
+};
+
+// 在应用程序中使用外观对象
+RequestFacade.get('https://api.example.com/data', { headers: { 'Authorization': 'Bearer token' } });
+
+RequestFacade.post('https://api.example.com/data', { body: { name: 'John', age: 25 } });
+
+RequestFacade.put('https://api.example.com/data/1', { body: { name: 'Jane', age: 30 } });
+
+RequestFacade.delete('https://api.example.com/data/1');
+```
+
+在这个示例中，我们创建了一个外观对象`RequestFacade`，它封装了不同类型的请求（GET、POST、PUT、DELETE）的复杂接口，将复杂的请求接口进行了封装和简化。
+
+客户端只需与`RequestFacade`对象进行交互来发送不同类型的请求，无需了解每个请求类型的具体实现细节。
 
 ### ⭐02 适配器模式
 
-- 适配器模式是将一个类（对象）的接口（方法或属性）转换成另外一个接口，以满足用户需求，解决接口不兼容问题
-- 用法一： 组件库接口适配
-- 用法二： 参数适配
-- 用法三： 数据适配
+适配器模式是一种结构型设计模式，它允许将一个类的接口转换成另一个接口，以满足不同类之间的接口兼容性需求。
+
+适配器模式的主要目的是解决两个已有接口之间不兼容的问题，让它们能够协同工作。适配器通过封装一个已有类的接口，提供一个新的接口供其他类使用。
+
+#### 适配器模式涉及以下几个角色：
+
+1. 目标接口（Target Interface）：定义客户端期望的接口，适配器将目标接口转换为适配者接口。
+2. 适配器（Adapter）：实现目标接口，并在内部持有适配者对象的引用。适配器将目标接口的方法调用转发给适配者对象。
+3. 适配者（Adaptee）：已有的类或对象，其接口与目标接口不兼容。
+4. 客户端（Client）：使用目标接口进行操作的类或对象。
+
+#### 适配器模式的工作原理如下：
+
+1. 客户端通过调用目标接口的方法来实现所需功能。
+2. 适配器实现了目标接口，并在内部持有一个适配者对象的引用。
+3. 当客户端调用适配器的方法时，适配器将请求转发给适配者对象的相应方法。
+4. 适配者对象执行实际的操作，并将结果返回给适配器。
+5. 适配器将结果返回给客户端，使其能够正常工作。
+
+#### 适配器模式的优点包括：
+
+- 解决接口不兼容问题，使得不同接口的类能够协同工作。
+- 可以在不修改现有代码的情况下引入新功能。
+- 增加代码的灵活性和复用性。
+
+#### 适配器模式的适用场景包括：
+
+1、组件库接口适配：当我们使用第三方组件库时，组件库提供的接口可能与我们的代码需求不匹配。此时，可以创建一个适配器类，将组件库的接口转换为我们需要的接口。适配器类实现目标接口，并在内部调用组件库的接口进行适配转换，使得组件库能够与我们的代码无缝协同工作。
+
+> 假设我们正在使用一个图表库，它提供了一个`drawChart`方法来绘制图表。但是，我们的应用程序中已经存在一个绘图类`Plotter`，它具有`plot`方法来绘制图表。为了与图表库无缝协同工作，我们可以创建一个适配器类`ChartAdapter`，它实现了`plot`方法，内部调用图表库的`drawChart`方法进行适配转换。
+
+```js
+// 已有的绘图类
+function Plotter() {
+  this.plot = function() {
+    // 绘制图表的具体实现
+    console.log('Plotting chart...');
+  };
+}
+
+// 图表库
+function ChartLibrary() {
+  this.drawChart = function() {
+    // 绘制图表的具体实现
+    console.log('Drawing chart...');
+  };
+}
+
+// 适配器类
+function ChartAdapter() {
+  var chartLibrary = new ChartLibrary();
+
+  this.plot = function() {
+    chartLibrary.drawChart();
+  };
+}
+
+// 在应用程序中使用适配器
+var plotter = new Plotter();
+plotter.plot(); // 输出: Plotting chart...
+
+var chartAdapter = new ChartAdapter();
+chartAdapter.plot(); // 输出: Drawing chart...
+```
+
+在这个示例中，通过创建`ChartAdapter`适配器类，我们成功地将图表库的接口转换为了`Plotter`类已有的接口。现在，无论是使用`Plotter`类还是`ChartAdapter`类，都可以绘制图表。
+
+2、参数适配：有时候我们需要使用一个方法，但是该方法的参数与我们当前的数据结构不匹配。通过创建适配器类，我们可以将当前数据结构的参数适配为符合目标方法要求的参数。适配器类接收当前数据结构的参数，在内部进行适配处理后，调用目标方法并传递适配后的参数，以实现对方法的适配。
+
+> 假设我们有一个发送邮件的函数`sendEmail`，它接受一个包含收件人、主题和内容的对象作为参数。但是，我们现在需要从不同的数据源中获取邮件信息，例如一个包含`to`、`subject`和`body`属性的简单对象或一个具有不同属性名称的复杂对象。我们可以使用适配器模式来适配不同的数据源，使其符合`sendEmail`函数的参数要求。
+
+```js
+function sendEmail(email) {
+  console.log(`Sending email to: ${email.to}`);
+  console.log(`Subject: ${email.subject}`);
+  console.log(`Content: ${email.body}`);
+}
+
+// 简单对象数据源
+var simpleEmail = {
+  to: 'john@example.com',
+  subject: 'Hello',
+  body: 'This is a simple email.'
+};
+
+// 复杂对象数据源
+var complexEmail = {
+  recipient: 'jane@example.com',
+  title: 'Greetings',
+  message: 'This is a complex email.'
+};
+
+// 适配器类
+function EmailAdapter(email) {
+  this.to = email.recipient || email.to;
+  this.subject = email.title || email.subject;
+  this.body = email.message || email.body;
+}
+
+// 在应用程序中使用适配器
+sendEmail(simpleEmail); // 输出:
+// Sending email to: john@example.com
+```
+
+3、数据适配：在某些情况下，我们需要将数据转换成另一种数据结构以满足特定的需求。适配器模式可以用于数据适配，将原始数据进行转换和重组，以适应目标数据结构的要求。适配器类负责将原始数据适配为目标数据结构，并提供符合目标接口的方法供客户端使用。
+
+> 假设我们从外部API获取了一组学生数据，每个学生对象包含`name`和`score`属性。但是我们的应用程序需要将学生数据转换为包含`studentName`和`studentScore`属性的对象。我们可以创建一个适配器类`StudentAdapter`来适配学生数据。
+
+```js
+// 外部数据源的学生对象
+var externalStudent = {
+  name: 'John',
+  score: 90
+};
+
+// 适配器类
+function StudentAdapter(student) {
+  this.studentName = student.name;
+  this.studentScore = student.score;
+}
+
+// 在应用程序中使用适配器
+var adaptedStudent = new StudentAdapter(externalStudent);
+console.log(adaptedStudent); // 输出: { studentName: 'John', studentScore: 90 }
+```
 
 ### ⭐03 代理模式
 
@@ -1438,13 +1808,290 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 代理模式的优点是可以在不修改原始对象的情况下，通过引入代理对象来控制和扩展对原始对象的访问。代理对象可以拦截请求、执行额外的逻辑、提供缓存、限制访问等功能。这种方式使得代码更灵活、可扩展，并能提供更好的控制和保护。
 
+**举个例子来说明代理模式的应用。**
 
+> 假设我们有一个图片加载器，用于从服务器加载图片并显示在网页上。由于图片文件可能比较大，加载和显示图片可能会耗费一定的时间。我们希望在图片加载完成之前显示一个加载中的提示，并在图片加载完成后将其显示出来。
+>
+> 这时候，我们可以使用代理模式来实现这个需求。我们创建一个图片代理对象，作为图片加载器和实际图片对象之间的中介。代理对象在图片加载之前显示加载中的提示，然后将加载请求转发给实际的图片对象进行加载。当图片加载完成后，代理对象将其显示在网页上。
 
-### ⭐04 装饰者模式
+```js
+function Image(url) {
+  this.url = url;
+}
 
-- 在不改变原对象的基础上，通过对其进行包装拓展（添加属性或者方法）使原有对象可以满足用户更复杂的需求、
-- 通过缓存对象原有的方法和属性，然后在装饰者方法中调用原有属性和方法和新增的方法和属性来实现功能拓展
-- 与适配器模式的不同：适配器需要了解原有方法的细节，而装饰器则不关心原有方法的实现细节。
+Image.prototype.load = function () {
+  console.log(`Loading image from ${this.url}`);
+  // 模拟图片加载延迟
+  setTimeout(() => {
+    console.log(`Image loaded: ${this.url}`);
+  }, 1000);
+};
+
+// 图片代理对象
+function ImageProxy(url) {
+  this.url = url;
+  this.image = null; // 实际的图片地址
+}
+
+ImageProxy.prototype.load = function() {
+  if (!this.image) {
+    this.image = new Image(this.url); // 创建实际的图片对象
+  }
+  console.log("Displaying loading indicator")
+
+  // 在图片加载完成后将其显示出来
+  setTimeout(() => {
+    this.image.load()
+  }, 1000)
+}
+
+// 使用代理对象加载和显示图片
+const imageProxy1 = new ImageProxy("example.com/image.JPG")
+imageProxy1.load();
+// 输出：
+// Displaying loading indicator
+// (1秒后)
+// Loading image from example.com/image.jpg
+// (1秒后)
+// Image loaded: example.com/image.jpg
+```
+
+在上述示例中，`ImageProxy` 充当了图片加载器和实际图片对象之间的代理对象。当调用 `load` 方法时，代理对象首先显示加载中的提示，然后创建实际的图片对象并调用其 `load` 方法进行图片加载。这样就可以在加载图片时显示加载中的提示，并在加载完成后将其显示出来。
+
+> 代理模式其实说简单了就是对原有对象/函数再包装一层，并且保持和原对象一致的行为。那么为什么不直接改原对象呢？
+>
+> 第一，可能不方便直接改原对象，所以只能采取代理模式包一层了。
+>
+> 第二，「单一职责原则」，如果直接修改原对象，会增加原有对象的复杂度，原对象如果负责的职责过多，引起对象改动的原因就会增多。
+>
+> 第三，未来如果新功能要去掉，修改起来也不方便。如果使用了代理模式，只需要把原来引用的地方还原即可。
+
+### ⭐04 装饰器模式
+
+装饰器模式是一种结构型设计模式，遵循开放封闭原则，它允许在**不改变原有对象的情况下，通过对其进行包装拓展，以满足用户更复杂的需求。**
+
+装饰器模式通过将对象包装在一个装饰器对象中，来动态地添加新的行为或功能。装饰器对象通过缓存原有对象的方法和属性，并在自己的方法中调用原有对象的方法和新增的方法，从而实现功能的拓展。
+
+在装饰器模式中，有三个主要角色：
+
+1. 组件（Component）：它是被装饰的原始对象，它定义了基本的接口和行为。
+2. 装饰器（Decorator）：它是包含了与组件相同接口的对象，它实际上是对组件的包装。装饰器与组件实现了相同的接口，这样可以将装饰器链式地组合在一起，以透明地为组件添加功能。
+3. 装饰器客户端（Client）：它使用装饰器对象来处理请求。它通过与装饰器交互来实现对组件的功能扩展。
+
+以下是装饰器模式的基本工作原理：
+
+1. 定义组件接口：创建一个基本组件接口或抽象类，定义了组件的基本方法。
+2. 实现组件：实现具体的组件类，它们实现了组件接口并提供了基本功能。
+3. 创建装饰器类：创建装饰器类，它与组件实现相同的接口，以便可以透明地包装组件对象。
+4. 在装饰器中添加功能：在装饰器中添加额外的功能，可以在调用原始组件方法前后执行一些操作，或者在原始功能的基础上添加新的行为。
+5. 使用装饰器：在客户端代码中使用装饰器对象来处理请求。客户端可以使用一个或多个装饰器对象来组合功能，形成一个装饰器链。
+
+**装饰器模式与适配器模式的区别**
+
+装饰器模式与适配器模式的区别在于关注点不同。
+
+- 适配器模式旨在使不兼容的接口变得兼容，需要了解原有方法的细节，并进行适配。
+- 而装饰器模式则不关心原有方法的实现细节，只关注对对象的功能拓展。
+
+简单的装饰器：
+
+```js
+// 原有对象
+class Component {
+  operation() {
+    console.log("Component operation");
+  }
+}
+
+// 装饰器对象
+class Decorator {
+  constructor(component) {
+    this.component = component;
+  }
+
+  operation() {
+    this.component.operation();
+    this.additionalOperation();
+  }
+
+  additionalOperation() {
+    console.log("Additional operation");
+  }
+}
+
+// 使用装饰器包装原有对象
+const component = new Component();
+const decoratedComponent = new Decorator(component);
+
+// 调用装饰器对象的方法，实现功能拓展
+decoratedComponent.operation();
+
+// 输出：
+// Component operation
+// Additional operation
+```
+
+假设我们有一个电子商务网站，我们希望对用户进行身份验证、日志记录和缓存处理。我们可以使用装饰器模式来实现这些功能的透明拓展。
+
+```js
+// 基本的用户服务类，提供了一些基本的用户操作方法：
+function UserService() {}
+
+UserService.prototype.getUser = function(userId) {
+  console.log("Getting user with ID: " + userId);
+  // 模拟从数据库获取用户信息
+  return { id: userId, name: "John Doe" };
+};
+
+// 身份验证装饰器
+function AuthenticationDecorator(userService) {
+  this.userService = userService;
+}
+
+AuthenticationDecorator.prototype.getUser = function(userId) {
+  this.authenticateUser();
+  return this.userService.getUser(userId);
+};
+
+AuthenticationDecorator.prototype.authenticateUser = function() {
+  console.log("Authenticating user...");
+  // 进行身份验证逻辑
+};
+
+// 日志记录装饰器
+function LoggingDecorator(userService) {
+  this.userService = userService;
+}
+
+LoggingDecorator.prototype.getUser = function(userId) {
+  this.logRequest(userId);
+  return this.userService.getUser(userId);
+};
+
+LoggingDecorator.prototype.logRequest = function(userId) {
+  console.log("Logging request for user with ID: " + userId);
+  // 记录请求日志
+};
+
+// 缓存装饰器
+function CachingDecorator(userService) {
+  this.userService = userService;
+  this.cache = {};
+}
+
+CachingDecorator.prototype.getUser = function(userId) {
+  if (this.cache[userId]) {
+    console.log("Fetching user from cache with ID: " + userId);
+    return this.cache[userId];
+  }
+
+  var user = this.userService.getUser(userId);
+  this.cache[userId] = user;
+  return user;
+};
+
+// 创建原始的 UserService 对象
+var userService = new UserService();
+
+// 使用装饰器进行功能拓展
+var decoratedUserService = new CachingDecorator(
+  new LoggingDecorator(new AuthenticationDecorator(userService))
+);
+
+// 调用拓展后的方法
+var user1 = decoratedUserService.getUser(123);
+var user2 = decoratedUserService.getUser(456);
+var user3 = decoratedUserService.getUser(123);
+
+console.log(user1);
+console.log(user2);
+console.log(user3);
+```
+
+ES5实现
+
+```js
+// 定义一个基本的用户服务类 UserService，它提供了一些基本的用户操作方法：
+class UserService {
+  getUser(userId) {
+    console.log(`Getting user with ID: ${userId}`);
+    // 模拟从数据库获取用户信息
+    return { id: userId, name: "John Doe" };
+  }
+}
+
+// 定义装饰器类，用于拓展 UserService 的功能：
+// 身份验证装饰器
+class AuthenticationDecorator {
+  constructor(userService) {
+    this.userService = userService;
+  }
+
+  getUser(userId) {
+    this.authenticateUser();
+    return this.userService.getUser(userId);
+  }
+
+  authenticateUser() {
+    console.log("Authenticating user...");
+    // 进行身份验证逻辑
+  }
+}
+
+// 日志记录装饰器
+class LoggingDecorator {
+  constructor(userService) {
+    this.userService = userService;
+  }
+
+  getUser(userId) {
+    this.logRequest(userId);
+    return this.userService.getUser(userId);
+  }
+
+  logRequest(userId) {
+    console.log(`Logging request for user with ID: ${userId}`);
+    // 记录请求日志
+  }
+}
+
+// 缓存装饰器
+class CachingDecorator {
+  constructor(userService) {
+    this.userService = userService;
+    this.cache = new Map();
+  }
+
+  getUser(userId) {
+    if (this.cache.has(userId)) {
+      console.log(`Fetching user from cache with ID: ${userId}`);
+      return this.cache.get(userId);
+    }
+
+    const user = this.userService.getUser(userId);
+    this.cache.set(userId, user);
+    return user;
+  }
+}
+
+// 使用装饰器来包装 UserService 对象，以实现功能的拓展
+// 创建原始的 UserService 对象
+const userService = new UserService();
+
+// 使用装饰器进行功能拓展
+const decoratedUserService = new CachingDecorator(
+  new LoggingDecorator(new AuthenticationDecorator(userService))
+);
+
+// 调用拓展后的方法
+const user1 = decoratedUserService.getUser(123);
+const user2 = decoratedUserService.getUser(456);
+const user3 = decoratedUserService.getUser(123);
+
+console.log(user1);
+console.log(user2);
+console.log(user3);
+```
 
 ### 05 桥接模式
 
@@ -1466,8 +2113,6 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ## 第四篇 行为型设计模式
 
-> 行为型设计模式
-
 ### 01 模板方法模式
 
 - 父类中定义一组操作算法骨架，而降一些实现步骤延迟到子类中，使得子类可以不改变父类的算法机构的同时可重新定义算法中某些实现步骤
@@ -1476,12 +2121,164 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ### ⭐02 观察者模式
 
-- 又称发布-订阅者模式或消息机制
-- 它定义了一种依赖关系，解决了主体对象与观察者
-- 包含两个基本方法：接收消息、向订阅者发布消息
-- 还需要取消注册方法、消息容器。
-- 接收消息（即消息注册）作用是将订阅者注册的消息推入消息容器，接收两个参数:消息类型和处理动作
-- 发布消息作用是当观察者发布一个消息时将所有订阅者订阅的消息一次执行，接收两个参数：消息类型及行为参数
+观察者模式（Observer Pattern）是一种行为型设计模式，也被称为发布-订阅者模式或消息机制。它定义了一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都会得到通知并自动更新。
+
+观察者模式包含以下几个核心角色：
+
+1. 主体（Subject）：也称为被观察者或发布者，它维护一系列观察者对象，并在状态变化时通知观察者。
+2. 观察者（Observer）：也称为订阅者或监听者，它定义了接收和处理主体通知的方法。
+3. 消息（Message）：作为观察者和主体之间进行通信的数据，包含消息类型和相关的参数。
+4. 消息容器（Message Container）：用于存储和管理订阅者注册的消息。
+
+观察者模式的基本方法包括：
+
+- 接收消息（Register）：将订阅者注册的消息推入消息容器中，包括消息类型和处理动作。
+- 发布消息（Publish）：当主体对象发布一个消息时，将所有订阅了该消息类型的观察者依次执行相应的处理动作，包括消息类型和行为参数。
+
+观察者模式的优点在于它实现了主体和观察者之间的解耦，使得它们可以独立地进行扩展和变化。主体对象不需要关心具体的观察者，而观察者也不需要知道主体对象的细节，从而实现了松耦合的设计。
+
+观察者模式在实际应用中非常常见，例如事件处理、GUI编程、消息队列等场景中都可以使用观察者模式来实现事件的订阅和通知机制。
+
+总之，观察者模式通过定义一种依赖关系，使主体对象与观察者对象解耦，并实现了一对多的通知机制。它提供了一种灵活的方式来实现发布-订阅的场景，并支持动态的添加和移除观察者。
+
+> 假设我们有一个简单的新闻发布系统，其中包含一个新闻主题（Subject）和多个订阅者（Observers）。每当有新闻发布时，订阅者都会收到相应的通知并进行相应的处理。
+
+```js
+// 主题（Subject）- 新闻发布者
+function NewsPublisher() {
+  this.observers = []; // 订阅者列表
+}
+
+// 注册订阅者
+NewsPublisher.prototype.registerObserver = function(observer) {
+  this.observers.push(observer);
+};
+
+// 取消注册订阅者
+NewsPublisher.prototype.unregisterObserver = function(observer) {
+  var index = this.observers.indexOf(observer);
+  if (index !== -1) {
+    this.observers.splice(index, 1);
+  }
+};
+
+// 发布新闻
+NewsPublisher.prototype.publishNews = function(news) {
+  console.log("Publishing news: " + news);
+  this.notifyObservers(news);
+};
+
+// 通知所有订阅者
+NewsPublisher.prototype.notifyObservers = function(news) {
+  var self = this;
+  this.observers.forEach(function(observer) {
+    observer.update(news);
+  });
+};
+
+// 订阅者（Observer）- 新闻订阅者
+function NewsSubscriber(name) {
+  this.name = name;
+}
+
+// 更新方法
+NewsSubscriber.prototype.update = function(news) {
+  console.log(this.name + " received news: " + news);
+};
+
+// 创建新闻发布者和订阅者
+var publisher = new NewsPublisher();
+
+var subscriber1 = new NewsSubscriber("Subscriber 1");
+var subscriber2 = new NewsSubscriber("Subscriber 2");
+var subscriber3 = new NewsSubscriber("Subscriber 3");
+
+// 订阅者注册到发布者
+publisher.registerObserver(subscriber1);
+publisher.registerObserver(subscriber2);
+publisher.registerObserver(subscriber3);
+
+// 发布新闻
+publisher.publishNews("Breaking News: COVID-19 Vaccine Approved!");
+
+// 输出：
+// Publishing news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 1 received news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 2 received news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 3 received news: Breaking News: COVID-19 Vaccine Approved!
+```
+
+ES6实现
+
+```js
+// 主题（Subject）- 新闻发布者
+class NewsPublisher {
+  constructor() {
+    this.observers = []; // 订阅者列表
+  }
+
+  // 注册订阅者
+  registerObserver(observer) {
+    this.observers.push(observer);
+  }
+
+  // 取消注册订阅者
+  unregisterObserver(observer) {
+    const index = this.observers.indexOf(observer);
+    if (index !== -1) {
+      this.observers.splice(index, 1);
+    }
+  }
+
+  // 发布新闻
+  publishNews(news) {
+    console.log(`Publishing news: ${news}`);
+    this.notifyObservers(news);
+  }
+
+  // 通知所有订阅者
+  notifyObservers(news) {
+    this.observers.forEach(observer => {
+      observer.update(news);
+    });
+  }
+}
+
+// 订阅者（Observer）- 新闻订阅者
+class NewsSubscriber {
+  constructor(name) {
+    this.name = name;
+  }
+
+  // 更新方法
+  update(news) {
+    console.log(`${this.name} received news: ${news}`);
+  }
+}
+
+// 创建新闻发布者和订阅者
+const publisher = new NewsPublisher();
+
+const subscriber1 = new NewsSubscriber('Subscriber 1');
+const subscriber2 = new NewsSubscriber('Subscriber 2');
+const subscriber3 = new NewsSubscriber('Subscriber 3');
+
+// 订阅者注册到发布者
+publisher.registerObserver(subscriber1);
+publisher.registerObserver(subscriber2);
+publisher.registerObserver(subscriber3);
+
+// 发布新闻
+publisher.publishNews('Breaking News: COVID-19 Vaccine Approved!');
+
+// 输出：
+// Publishing news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 1 received news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 2 received news: Breaking News: COVID-19 Vaccine Approved!
+// Subscriber 3 received news: Breaking News: COVID-19 Vaccine Approved!
+```
+
+
 
 ### 03 状态模式
 
@@ -1492,18 +2289,356 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ### ⭐04 策略模式
 
-- 将定义的一组算法封装起来，使其相互之间可以替换
-- 封装的算法具有一定的独立性，不会随客户端变化而变化
-- 结构上与状态模式很像，在内部封装一个对象，通过返回的接口对象实现对内部对象的调用，但不需要管理状态
-- 典型应用场景：表单验证
+策略模式是一种行为型设计模式，它允许在运行时选择算法的行为。该模式将一组算法封装成独立的对象，使它们可以相互替换，而不会影响客户端代码。
+
+策略模式的主要思想是将算法的定义和使用相互分离，使得算法可以独立于客户端变化而变化。它将每个算法封装在一个独立的策略类中，并通过一个公共接口让客户端可以动态地选择和使用不同的算法。
+
+在策略模式中，客户端通过使用一个上下文对象来执行特定的算法。上下文对象持有一个策略对象的引用，并将具体的任务委托给策略对象来处理。客户端可以根据需要在运行时切换不同的策略对象，而不需要修改客户端的代码。
+
+策略模式的优点在于可以提供灵活性和可扩展性。通过将算法封装在策略类中，可以轻松地增加、修改或替换算法，而无需修改客户端的代码。这使得系统更具可维护性和可测试性。
+
+总之，策略模式通过封装一组算法，使其可以相互替换，并与客户端解耦。它提供了一种灵活的方式来选择和执行不同的算法，以满足不同的需求。
+
+1、一个典型的应用场景是表单验证。在表单中，可能会有多个不同的验证规则，例如必填字段、长度限制、格式验证等。每个验证规则都可以封装成一个具体的策略类，而表单对象充当上下文对象。客户端可以根据实际需求选择不同的验证策略，并将表单对象委托给相应的策略对象进行验证。
+
+首先，我们定义一个表单对象作为上下文对象：
+
+```javascript
+function Form() {
+  this.fields = [];
+}
+
+Form.prototype.addField = function(field) {
+  this.fields.push(field);
+};
+
+Form.prototype.validate = function() {
+  var isValid = true;
+
+  for (var i = 0; i < this.fields.length; i++) {
+    var field = this.fields[i];
+
+    if (!field.validate()) {
+      isValid = false;
+    }
+  }
+
+  return isValid;
+};
+```
+
+然后，我们定义不同的验证规则作为具体的策略类：
+
+```javascript
+// 必填字段验证策略
+function RequiredFieldStrategy() {}
+
+RequiredFieldStrategy.prototype.validate = function(value) {
+  return value !== '';
+};
+
+// 长度限制验证策略
+function LengthLimitStrategy(maxLength) {
+  this.maxLength = maxLength;
+}
+
+LengthLimitStrategy.prototype.validate = function(value) {
+  return value.length <= this.maxLength;
+};
+
+// 格式验证策略
+function FormatValidationStrategy(pattern) {
+  this.pattern = pattern;
+}
+
+FormatValidationStrategy.prototype.validate = function(value) {
+  return this.pattern.test(value);
+};
+```
+
+最后，我们可以在客户端代码中使用表单对象和验证策略：
+
+```javascript
+// 创建表单对象
+var form = new Form();
+
+// 添加字段到表单
+var usernameField = { name: 'username', value: '', strategy: new RequiredFieldStrategy() };
+var passwordField = { name: 'password', value: 'password123', strategy: new LengthLimitStrategy(8) };
+var emailField = { name: 'email', value: 'example.com', strategy: new FormatValidationStrategy(/\S+@\S+\.\S+/) };
+
+form.addField(usernameField);
+form.addField(passwordField);
+form.addField(emailField);
+
+// 验证表单字段
+var isValid = form.validate();
+console.log('Form is valid:', isValid); // 输出：Form is valid: false
+```
+
+在上面的例子中，我们使用策略模式来实现表单验证。表单对象充当上下文对象，而每个验证规则（必填字段、长度限制、格式验证）充当具体的策略类。
+
+客户端可以根据需要选择不同的验证策略，并将相应的验证策略对象设置给表单字段对象的`strategy`属性。调用表单对象的`validate`方法时，会委托给各个字段的验证策略对象进行验证，并返回最终的验证结果。
+
+2、假设我们正在开发一个电商网站，其中有一个购物车功能，我们希望能够根据不同的促销策略计算购物车中商品的总价格。
+
+首先，我们定义一个购物车对象（上下文对象）：
+
+```javascript
+function ShoppingCart() {
+  this.items = [];
+}
+
+ShoppingCart.prototype.addItem = function(item) {
+  this.items.push(item);
+};
+
+ShoppingCart.prototype.calculateTotalPrice = function() {
+  // 假设这里有一些其他的逻辑处理
+
+  // 根据当前的促销策略计算商品的总价格
+  if (this.pricingStrategy) {
+    return this.pricingStrategy.calculateTotalPrice(this.items);
+  } else {
+    // 默认情况下，没有设置促销策略时，直接计算商品的原始总价格
+    return this.items.reduce(function(total, item) {
+      return total + item.price;
+    }, 0);
+  }
+};
+```
+
+然后，我们定义促销策略对象（具体的策略类）：
+
+```javascript
+// 普通促销策略：不打折，直接计算商品原始总价格
+function RegularPricingStrategy() {}
+
+RegularPricingStrategy.prototype.calculateTotalPrice = function(items) {
+  return items.reduce(function(total, item) {
+    return total + item.price;
+  }, 0);
+};
+
+// 折扣促销策略：对商品总价格进行折扣
+function DiscountPricingStrategy(discount) {
+  this.discount = discount;
+}
+
+DiscountPricingStrategy.prototype.calculateTotalPrice = function(items) {
+  var totalPrice = items.reduce(function(total, item) {
+    return total + item.price;
+  }, 0);
+
+  return totalPrice * (1 - this.discount);
+};
+```
+
+最后，我们可以在客户端代码中使用购物车对象和促销策略对象：
+
+```javascript
+// 创建购物车对象
+var cart = new ShoppingCart();
+
+// 添加商品到购物车
+cart.addItem({ name: 'Product 1', price: 10 });
+cart.addItem({ name: 'Product 2', price: 20 });
+cart.addItem({ name: 'Product 3', price: 30 });
+
+// 设置促销策略为折扣促销策略（打8折）
+cart.pricingStrategy = new DiscountPricingStrategy(0.2);
+
+// 计算购物车商品的总价格
+var totalPrice = cart.calculateTotalPrice();
+console.log('Total Price:', totalPrice); // 输出：48
+
+// 切换促销策略为普通促销策略
+cart.pricingStrategy = new RegularPricingStrategy();
+
+// 重新计算购物车商品的总价格
+totalPrice = cart.calculateTotalPrice();
+console.log('Total Price:', totalPrice); // 输出：60
+```
+
+在上面的例子中，我们使用策略模式来计算购物车中商品的总价格。购物车对象充当上下文对象，而普通促销策略和折扣促销策略充当具体的策略类。
+
+客户端可以根据需求选择不同的促销策略，将其设置给购物车对象的`pricingStrategy`
 
 ### ⭐05 职责链模式
 
-- 解决请求的发送者与请求的接受者之间的耦合，通过职责链上的多个对象分解请求流程，实现请求在多个对象之间的传递，直到最后一个对象完成请求的处理。
-- 把每件事独立出一个模块对象去处理，完整的需求被分解成相互独立的模块需求
-- 方便进行单元测试，保证每个组件对象的处理逻辑的安全性
+职责链模式（Chain of Responsibility Pattern）是一种行为型设计模式，它通过将请求的发送者和接收者解耦，使多个对象都有机会处理这个请求。请求在一条职责链上依次传递，直到有一个对象能够处理它为止。
 
-### ⭐06 命令模式
+职责链模式的核心思想是将请求和处理分离，每个处理者都只关注自己能处理的请求，并将不能处理的请求传递给下一个处理者。这样可以实现请求的传递和处理的解耦，提高系统的灵活性和可维护性。
+
+职责链模式包含以下几个角色：
+
+1. 抽象处理者（Handler）：定义了处理请求的接口，并持有下一个处理者的引用。
+2. 具体处理者（ConcreteHandler）：实现抽象处理者的接口，负责处理特定类型的请求，如果自己不能处理，则将请求传递给下一个处理者。
+
+职责链模式的工作流程如下：
+
+1. 客户端创建一个职责链，并将处理请求的对象按照一定的顺序连接起来形成一条链。
+2. 当一个请求发生时，从链的头部开始，每个处理者判断自己是否能够处理该请求，如果能够处理，则处理请求并结束；如果不能处理，则将请求传递给下一个处理者。
+3. 请求在链上依次传递，直到有一个处理者能够处理它为止，或者到达链的末尾仍然没有处理者能够处理该请求。
+
+职责链模式的优点在于它能够动态地组织和管理对象之间的关系，使系统更灵活和可扩展。它使得请求的发送者和接收者解耦，增强了代码的可维护性和可测试性。同时，职责链模式也有助于避免请求的发送者与接收者之间的耦合，提高了系统的灵活性。
+
+> 假设我们有一个家庭智能设备控制系统，其中包含了多个设备，例如电灯、空调和电视。我们希望能够通过命令的方式控制这些设备的开关状态。
+>
+
+首先，我们定义一个抽象命令类 `Command`，它包含了执行命令和撤销命令的方法。
+
+```javascript
+// 抽象命令类
+class Command {
+  execute() {}
+  undo() {}
+}
+```
+
+然后，我们实现具体的命令类，例如开灯命令、关灯命令、开空调命令、关空调命令等。
+
+```javascript
+// 开灯命令
+class LightOnCommand extends Command {
+  constructor(light) {
+    super();
+    this.light = light;
+  }
+
+  execute() {
+    this.light.turnOn();
+  }
+
+  undo() {
+    this.light.turnOff();
+  }
+}
+
+// 关灯命令
+class LightOffCommand extends Command {
+  constructor(light) {
+    super();
+    this.light = light;
+  }
+
+  execute() {
+    this.light.turnOff();
+  }
+
+  undo() {
+    this.light.turnOn();
+  }
+}
+
+// 开空调命令
+class ACOnCommand extends Command {
+  constructor(ac) {
+    super();
+    this.ac = ac;
+  }
+
+  execute() {
+    this.ac.turnOn();
+  }
+
+  undo() {
+    this.ac.turnOff();
+  }
+}
+
+// 关空调命令
+class ACOffCommand extends Command {
+  constructor(ac) {
+    super();
+    this.ac = ac;
+  }
+
+  execute() {
+    this.ac.turnOff();
+  }
+
+  undo() {
+    this.ac.turnOn();
+  }
+}
+```
+
+接下来，我们定义设备类，例如电灯类和空调类。
+
+```javascript
+// 电灯类
+class Light {
+  turnOn() {
+    console.log('Light is turned on');
+  }
+
+  turnOff() {
+    console.log('Light is turned off');
+  }
+}
+
+// 空调类
+class AC {
+  turnOn() {
+    console.log('AC is turned on');
+  }
+
+  turnOff() {
+    console.log('AC is turned off');
+  }
+}
+```
+
+最后，我们可以创建控制器类，它包含了执行命令和撤销命令的方法，并通过命令对象来操作设备。
+
+```javascript
+class Controller {
+  constructor() {
+    this.commands = [];
+  }
+
+  addCommand(command) {
+    this.commands.push(command);
+  }
+
+  executeCommand() {
+    for (const command of this.commands) {
+      command.execute();
+    }
+  }
+
+  undoCommand() {
+    for (const command of this.commands.reverse()) {
+      command.undo();
+    }
+  }
+}
+```
+
+现在，我们可以测试这个家庭智能设备控制系统。
+
+```javascript
+// 创建设备对象
+const light = new Light();
+const ac = new AC();
+
+// 创建命令对象
+const lightOnCommand = new LightOnCommand(light);
+const lightOffCommand = new LightOffCommand(light);
+const acOnCommand = new ACOnCommand(ac);
+const acOffCommand = new ACOffCommand(ac);
+
+// 创建控制器对象
+const controller = new Controller();
+
+// 添加命令到控制器
+controller.addCommand(lightOnCommand);
+controller.addCommand(acOnCommand);
+controller.add
+```
+
+### 06 命令模式
 
 - 将请求与实现解耦并封装成独立对象，从而使不同的请求对客户端的实现参数化
 - 将创建模块的逻辑封装在一个对象里，这个对象提供一个参数化的请求接口，通过调用这个接口并传递一些参数实现调用命令对象内部的一些方法
@@ -1530,15 +2665,68 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ### ⭐10 迭代器模式
 
-- 在不暴露对象内部结构的同时，可以顺序地访问聚合对象内部的元素
+迭代器模式（Iterator Pattern）是一种行为型设计模式，它提供一种顺序访问聚合对象中各个元素的方法，而又不需要暴露该对象的内部结构。
+
+迭代器模式将遍历和迭代的责任封装到迭代器对象中，而不是由聚合对象来进行遍历。这样做的好处是可以让聚合对象和迭代算法相互独立，彼此不受影响。聚合对象只需要提供一个创建迭代器的方法，而迭代器负责管理遍历过程。
+
+迭代器模式通常包含以下几个角色：
+
+1. 迭代器接口（Iterator）：定义了遍历聚合对象的方法，包括获取当前元素、移动到下一个元素等操作。
+2. 具体迭代器（ConcreteIterator）：实现迭代器接口，负责实现具体的遍历算法。
+3. 聚合对象接口（Aggregate）：定义了创建迭代器的方法。
+4. 具体聚合对象（ConcreteAggregate）：实现聚合对象接口，负责创建具体迭代器。
+
+迭代器模式的核心思想是将遍历和迭代的责任分离，使得聚合对象和迭代器对象可以独立变化，互不影响。聚合对象只需要提供迭代器的接口，而不需要暴露内部结构，从而提高了封装性和灵活性。
+
+在 ES5 中实现迭代器模式需要借助于闭包和函数对象的特性。下面是一个使用 ES5 实现迭代器模式的简单案例：
+
+```javascript
+// 迭代器函数
+function createIterator(array) {
+  var index = 0;
+
+  // 返回迭代器对象
+  return {
+    hasNext: function() {
+      return index < array.length;
+    },
+
+    next: function() {
+      return array[index++];
+    }
+  };
+}
+
+// 聚合对象
+var aggregate = {
+  data: [1, 2, 3, 4, 5],
+
+  // 创建迭代器
+  createIterator: function() {
+    return createIterator(this.data);
+  }
+};
+
+// 使用迭代器遍历聚合对象
+var iterator = aggregate.createIterator();
+while (iterator.hasNext()) {
+  console.log(iterator.next());
+}
+```
+
+在这个案例中，我们定义了一个 `createIterator` 函数，它接受一个数组作为参数，并返回一个迭代器对象。迭代器对象包含了 `hasNext` 和 `next` 方法，用于判断是否还有下一个元素并获取下一个元素。
+
+聚合对象 `aggregate` 中包含了一个数据数组和 `createIterator` 方法，用于创建对应的迭代器对象。
+
+最后，我们使用迭代器遍历聚合对象的数据数组。首先调用 `aggregate.createIterator()` 方法创建迭代器对象，然后使用 `while` 循环和迭代器的 `hasNext` 和 `next` 方法遍历数据并输出结果。
+
+这个案例展示了如何使用 ES5 实现简单的迭代器模式，通过迭代器对象和聚合对象的配合使用，实现了对聚合对象内部元素的顺序访问，同时又不需要暴露内部结构。
 
 ### 11 解释器模式
 
 - 对于一种语言，给出其文法形式，并定义一种解释器，通过使用这种解释器来解释语言中定义的句子
 
 ## 第五篇 技巧型设计模式
-
-> 技巧型设计模式
 
 ### 01 链模式
 
@@ -1619,11 +2807,55 @@ console.log(singletonInstance.publicProperty); // 输出: This is a public prope
 
 ### ⭐06 MVVM模式
 
-- 即模型（Model）-视图（View）-视图模型（ViewModel）
-- 为视图层量身定做一套视图模型，并在视图模型中创建属性和方法，为视图层绑定数据并实现交互
-- 这样做以后 View层可以直接使用HTML来完成。
+MVVM（Model-View-ViewModel）是一种软件架构模式，用于将应用程序的用户界面（View）与底层的数据模型（Model）进行分离，并通过一个称为视图模型（ViewModel）的中间层进行交互。
 
-作者：何建博本尊
-链接：https://juejin.cn/post/6844903954036293640
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+在MVVM模式中，View负责显示和用户交互，Model表示应用程序的数据和业务逻辑，ViewModel是View和Model之间的连接器。ViewModel中包含了视图所需的数据和命令，并且能够响应视图的变化和用户的交互，同时更新Model的状态。
+
+MVVM模式的主要特点是双向数据绑定。当View的状态发生变化时，ViewModel会自动更新数据模型，反之亦然。这样可以减少开发人员对视图和数据的手动同步工作，提高开发效率和代码的可维护性。
+
+```js
+// Model
+var model = {
+  name: "John Doe",
+  age: 25
+};
+
+// ViewModel
+var viewModel = {
+  data: model,
+  
+  // 计算属性
+  fullName: function() {
+    return this.data.name;
+  },
+  
+  // 方法
+  incrementAge: function() {
+    this.data.age++;
+  }
+};
+
+// View
+var view = {
+  render: function() {
+    var fullName = viewModel.fullName();
+    var age = viewModel.data.age;
+    console.log("Name: " + fullName);
+    console.log("Age: " + age);
+  }
+};
+
+// 更新View
+view.render(); // 输出：Name: John Doe, Age: 25
+
+// 用户交互
+viewModel.incrementAge();
+
+// 更新View
+view.render(); // 输出：Name: John Doe, Age: 26
+```
+
+> 作者：何建博本尊
+> 链接：https://juejin.cn/post/6844903954036293640
+> 来源：稀土掘金
+> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

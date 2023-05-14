@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
+                "file": "🌐FrontEnd 文章收集/设计模式/前端中的设计模式（真实场景例子）.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
+                "file": "🌐FrontEnd 文章收集/设计模式/前端中的设计模式（真实场景例子）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
+                "file": "🌐FrontEnd 文章收集/设计模式/前端中的设计模式（真实场景例子）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md"
+                "file": "🌐FrontEnd 文章收集/设计模式/前端中的设计模式（真实场景例子）.md"
               }
             }
           }
@@ -149,23 +149,26 @@
   },
   "active": "08f7dbd11ca08f34",
   "lastOpenFiles": [
+    "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.md",
+    "🌐FrontEnd 文章收集/设计模式",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
     "阶段系统学习内容.md",
+    "🔲FrontEnd WhiteBored/堆内存、栈内存.md",
+    "Excalidraw/Drawing 2023-05-13 15.30.15.excalidraw.md",
+    "🌐FrontEnd 文章收集/设计模式/JavaScript设计模式es6（23种).md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript设计模式.md",
     "FrontEnd 阶段学习内容~4235C.tmp",
-    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript设计模式es6（23种).md",
     "系统内容.md",
     "Untitled.md",
     "FrontEnd 阶段学习内容~E2703.tmp",
     "FrontEnd 阶段学习内容~5F9FE.tmp",
     "~$FrontEnd 阶段学习内容.xlsx",
     "🌐FrontEnd 文章收集/02、JavaScript/关于JavaScript.md",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
     "🌐FrontEnd 文章收集/000、Recording.md",
     "🌐FrontEnd 文章收集/02、JavaScript/Untitled.md",
     "💡FrontEnd 知识卡片/03、JavaScript（基础）.md",
-    "Excalidraw/Drawing 2023-05-13 15.30.15.excalidraw.md",
     "Excalidraw",
     "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
-    "🔲FrontEnd WhiteBored/堆内存、栈内存.md",
     "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 命名约定最佳实践.md",
     "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 开发的45个经典技巧.md",
     "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 28个常用字符串方法及使用技巧_掘金_CUGGZ.md",
@@ -179,12 +182,9 @@
     "🌐FrontEnd 文章收集/02、JavaScript/深度揭秘 Promise 微任务注册和执行过程.md",
     "🌐FrontEnd 文章收集/02、JavaScript/这一次，彻底弄懂 JavaScript 执行机制.md",
     "📑FrontEnd 其他资料/掘金小册（前端小册+后端小册）/前端小册/剖析 Vue.js 内部运行机制/Vuex 状态管理的工作原理.md",
-    "FrontEnd 阶段学习内容.md",
     "FrontEnd 阶段学习内容~E3B52.tmp",
-    "新建 Markdown.md",
     "FrontEnd 阶段学习内容~C72A0.tmp",
     "FrontEnd 阶段学习内容.xlsx",
-    "FrontEnd 阶段记录.xlsx",
     "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.assets/image-20221031101039497.png",
     "📑FrontEnd 其他资料/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
