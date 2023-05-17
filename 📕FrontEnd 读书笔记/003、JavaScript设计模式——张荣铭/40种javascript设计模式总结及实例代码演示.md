@@ -2807,52 +2807,100 @@ while (iterator.hasNext()) {
 
 ### ⭐06 MVVM模式
 
-MVVM（Model-View-ViewModel）是一种软件架构模式，用于将应用程序的用户界面（View）与底层的数据模型（Model）进行分离，并通过一个称为视图模型（ViewModel）的中间层进行交互。
+JavaScript 中的 MVVM（Model-View-ViewModel）设计模式是一种用于构建用户界面的架构模式。它将应用程序分为三个主要部分：模型（Model）、视图（View）和视图模型（ViewModel）。
 
-在MVVM模式中，View负责显示和用户交互，Model表示应用程序的数据和业务逻辑，ViewModel是View和Model之间的连接器。ViewModel中包含了视图所需的数据和命令，并且能够响应视图的变化和用户的交互，同时更新Model的状态。
+1. 模型（Model）：
+   模型表示应用程序的数据和业务逻辑。它可以是一个简单的 JavaScript 对象或一个复杂的数据结构。模型通常包含用于获取、保存和更新数据的方法。
 
-MVVM模式的主要特点是双向数据绑定。当View的状态发生变化时，ViewModel会自动更新数据模型，反之亦然。这样可以减少开发人员对视图和数据的手动同步工作，提高开发效率和代码的可维护性。
+2. 视图（View）：
+   视图是用户界面的可见部分，它负责展示数据和与用户进行交互。在 JavaScript 中，视图通常由 HTML 和 CSS 组成，但也可以使用 JavaScript 框架（如 React 或 Angular）创建动态视图。
+
+3. 视图模型（ViewModel）：
+   视图模型是连接模型和视图的桥梁。它将模型中的数据转换为视图可以使用的格式，并将视图中的用户交互操作转换为对模型的操作。视图模型通常包含与用户交互相关的命令、属性和事件处理程序。
+
+MVVM 的核心思想是数据绑定。视图和视图模型之间建立了双向的数据绑定关系，当模型的数据改变时，视图会自动更新，当用户在视图中进行操作时，视图模型会自动更新模型的数据。
+
+在 JavaScript 中，有一些流行的框架和库可以帮助实现 MVVM 设计模式，例如 Vue.js 和 Knockout.js。这些框架提供了方便的工具和机制来处理数据绑定、视图更新和用户交互等方面的任务，简化了 MVVM 的实现过程。
+
+MVVM的优点包括：
+
+1. 分离关注点：MVVM将数据逻辑与用户界面分开，使代码更易于维护和测试。
+
+2. 可重用性：视图模型可以独立于具体的视图进行测试和重用，从而提高开发效率。
+
+3. 可扩展性：由于模型、视图和视图模型之间的明确分离，可以轻松添加新的视图和视图模型，而无需修改现有代码。
+
+4. 支持团队协作：MVVM通过明确定义各组件之间的接口和通信方式，促进了团队合作和并行开发。
+
+需要注意的是，MVVM并非适用于所有类型的应用程序，而是特别适用于具有复杂用户界面和大量数据交互的应用程序。它通常与现代的前端框架和库（如WPF、Angular、Vue.js等）结合使用。
+
+在 JavaScript 中实现 MVVM 设计模式，可以按照以下步骤进行：
+
+1. 定义模型（Model）： 创建一个 JavaScript 对象或类来表示应用程序的数据和业务逻辑。模型应该包含用于获取、保存和更新数据的方法。
+2. 创建视图（View）： 使用 HTML、CSS 和 JavaScript 框架（如 React、Angular 或 Vue.js）创建用户界面的可见部分。视图应该能够展示数据和响应用户的交互操作。
+3. 创建视图模型（ViewModel）： 创建一个 JavaScript 对象或类来充当视图和模型之间的桥梁。视图模型应该包含与用户交互相关的命令、属性和事件处理程序。
+4. 实现数据绑定： 在视图模型中创建属性，并将其与视图中的元素进行绑定。这可以通过使用框架提供的数据绑定语法或手动实现观察者模式来完成。当模型的数据发生变化时，视图模型会自动更新绑定的属性，进而更新视图。
+5. 处理用户交互： 在视图模型中定义命令和事件处理程序，用于响应用户在视图中的交互操作。这些命令和事件处理程序可以修改模型的数据，从而触发数据绑定机制，使视图自动更新。
+6. 连接模型、视图和视图模型： 在应用程序的入口点，创建模型、视图和视图模型的实例，并将它们连接起来。这可以通过手动实例化对象并建立关联，或使用框架提供的机制（如组件或指令）来完成。
 
 ```js
-// Model
-var model = {
-  name: "John Doe",
-  age: 25
-};
+// 模型（Model）
+function Model() {
+  this.data = {
+    message: 'Hello, MVVM!',
+  };
+}
 
-// ViewModel
-var viewModel = {
-  data: model,
-  
-  // 计算属性
-  fullName: function() {
-    return this.data.name;
-  },
-  
-  // 方法
-  incrementAge: function() {
-    this.data.age++;
-  }
-};
+// 视图模型（ViewModel）
+function ViewModel(model) {
+  this.model = model;
+  this.message = '';
 
-// View
-var view = {
-  render: function() {
-    var fullName = viewModel.fullName();
-    var age = viewModel.data.age;
-    console.log("Name: " + fullName);
-    console.log("Age: " + age);
-  }
-};
+  // 数据绑定
+  Object.defineProperty(this, 'message', {
+    get: function() {
+      return this.model.data.message;
+    },
+    set: function(value) {
+      this.model.data.message = value;
+    },
+  });
+}
 
-// 更新View
-view.render(); // 输出：Name: John Doe, Age: 25
+// 视图（View）
+function View(viewModel) {
+  this.viewModel = viewModel;
 
-// 用户交互
-viewModel.incrementAge();
+  // 初始化视图
+  this.init = function() {
+    var messageInput = document.getElementById('messageInput');
+    var messageDisplay = document.getElementById('messageDisplay');
 
-// 更新View
-view.render(); // 输出：Name: John Doe, Age: 26
+    // 绑定输入框与视图模型属性
+    messageInput.value = this.viewModel.message;
+    messageInput.addEventListener('input', function(event) {
+      this.viewModel.message = event.target.value;
+    }.bind(this));
+
+    // 绑定视图模型属性与显示元素
+    Object.defineProperty(this.viewModel, 'message', {
+      get: function() {
+        return messageDisplay.innerText;
+      },
+      set: function(value) {
+        messageDisplay.innerText = value;
+      },
+    });
+  };
+}
+
+// 实例化模型、视图模型和视图
+var model = new Model();
+var viewModel = new ViewModel(model);
+var view = new View(viewModel);
+
+// 初始化视图
+view.init();
 ```
 
 > 作者：何建博本尊
