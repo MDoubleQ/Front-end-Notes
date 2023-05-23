@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🌐FrontEnd 文章收集/02、JavaScript/常用正则表达式.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.51103591918945
+    "width": 489.5124969482422
   },
   "right": {
     "id": "618886454cad85f2",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🌐FrontEnd 文章收集/02、JavaScript/常用正则表达式.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🌐FrontEnd 文章收集/02、JavaScript/常用正则表达式.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🌐FrontEnd 文章收集/02、JavaScript/常用正则表达式.md"
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md"
               }
             }
           }
@@ -134,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 385.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,45 +147,45 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "df792af9ef752de9",
+  "active": "1f17177969dc489c",
   "lastOpenFiles": [
+    "📙FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
+    "💡FrontEnd 知识卡片/03、JavaScript（基础）.md",
+    "📙FrontEnd 课堂笔记（CoderWhy）/09_React",
+    "📙FrontEnd 课堂笔记（CoderWhy）",
+    "📙 FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
+    "📙 FrontEnd 课堂笔记（CoderWhy）/09_React",
+    "📙 FrontEnd 课堂笔记（CoderWhy）",
+    "FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
+    "FrontEnd 课堂笔记（CoderWhy）/09_React",
+    "FrontEnd 课堂笔记（CoderWhy）",
+    "CoderWhy课堂笔记/09_React/01-React介绍-特点-基本使用-JSX语法.md",
+    "CoderWhy课堂笔记/09_React",
+    "CoderWhy课堂笔记",
+    "💡FrontEnd 知识卡片/013、React.md",
+    "未命名.md",
+    "💻FrontEnd 项目实战/002_Trip/实战-Trip.pdf",
+    "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
+    "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
+    "Excalidraw/Drawing 2023-05-22 16.16.45.excalidraw.md",
+    "Excalidraw/Drawing 2023-05-22 16.16.35.excalidraw.md",
+    "Excalidraw",
+    "💡FrontEnd 知识卡片/02、CSS.md",
+    "📕FrontEnd 读书笔记/001、javaScript高级程序设计（第四版）——马特·弗里斯比/javaScript高级程序设计（第四版）.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript 设计模式总结及实例代码演示.md",
+    "💡FrontEnd 知识卡片/05、Vue.md",
+    "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
+    "📑FrontEnd 其他资料/人保/2022考试总结.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/009、ES6~ES12的常用新特性.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/003、进击的 JavaScript（三）之 函数执行过程.md",
+    "💻FrontEnd 项目实战/001_DoubleQ-后台管理系统/项目搭建和接口文档.md",
+    "💻FrontEnd 项目实战/001_DoubleQ-后台管理系统/项目笔记.md",
+    "💻FrontEnd 项目实战/002_Trip/实战-M_DoubleQ.md",
+    "🌐FrontEnd 文章收集/02、JavaScript/常用正则表达式.md",
     "💡FrontEnd 知识卡片/011、面试.md",
     "💻FrontEnd 项目实战/业务相关.md",
-    "~$FrontEnd 阶段学习内容.xlsx",
     "💻FrontEnd 项目实战/002_Trip/实战-Trip.md",
-    "💻FrontEnd 项目实战/002_Trip/实战-M_DoubleQ.md",
-    "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.md",
-    "💡FrontEnd 知识卡片/03、JavaScript（基础）.md",
-    "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
-    "单词.md",
-    "🌐FrontEnd 文章收集/02、JavaScript/002、进击的 JavaScript（二）之 数据结构.md",
-    "💡FrontEnd 知识卡片/013、设计模式.md",
-    "🌐FrontEnd 文章收集/设计模式/JavaScript设计模式es6（23种).md",
-    "🌐FrontEnd 文章收集/设计模式/前端中的设计模式（真实场景例子）.md",
-    "🌐FrontEnd 文章收集/设计模式",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/40种javascript设计模式总结及实例代码演示.md",
-    "阶段系统学习内容.md",
-    "🔲FrontEnd WhiteBored/堆内存、栈内存.md",
-    "Excalidraw/Drawing 2023-05-13 15.30.15.excalidraw.md",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript设计模式.md",
-    "FrontEnd 阶段学习内容~4235C.tmp",
-    "系统内容.md",
-    "Untitled.md",
-    "FrontEnd 阶段学习内容~E2703.tmp",
-    "FrontEnd 阶段学习内容~5F9FE.tmp",
-    "🌐FrontEnd 文章收集/02、JavaScript/关于JavaScript.md",
-    "🌐FrontEnd 文章收集/000、Recording.md",
-    "🌐FrontEnd 文章收集/02、JavaScript/Untitled.md",
-    "Excalidraw",
-    "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
-    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 命名约定最佳实践.md",
-    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 开发的45个经典技巧.md",
-    "🌐FrontEnd 文章收集/02、JavaScript/JavaScript 28个常用字符串方法及使用技巧_掘金_CUGGZ.md",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson06-skill_pattern/img/weibo.jpg",
-    "FrontEnd 阶段学习内容~2C310.tmp",
-    "FrontEnd 阶段学习内容~E3B52.tmp",
-    "FrontEnd 阶段学习内容~C72A0.tmp",
-    "FrontEnd 阶段学习内容.xlsx",
     "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.assets/image-20221031101039497.png",
     "📑FrontEnd 其他资料/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",

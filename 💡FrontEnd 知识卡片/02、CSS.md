@@ -2,7 +2,7 @@
 
 1、内联样式（Inline Style）：在 HTML 标签中直接写入样式代码，使用 style 属性，例如：
 
-```css
+```html
 <div style="color: red; font-size: 16px;">这是一个红色的字体，大小为 16px</div>
 ```
 
@@ -10,7 +10,7 @@
 
 2、内部样式表（Internal Style Sheet）：在 HTML 文件的头部定义样式表，使用 style 标签，例如：
 
-```css
+```html
 <head>
   <style type="text/css">
     .box {
@@ -28,7 +28,7 @@
 
 3、外部样式表（External Style Sheet）：将样式表放在一个独立的 CSS 文件中，使用 link 标签引入，例如：
 
-```css
+```html
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -124,7 +124,7 @@ line-height 属性可以让文字垂直居中的原因是因为它控制的是�
 
 例如，假设我们有一个 div 容器，其高度为 50px，如下所示：
 
-```
+```html
 <div style="height: 50px; line-height: 50px;">This is some text.</div>
 ```
 

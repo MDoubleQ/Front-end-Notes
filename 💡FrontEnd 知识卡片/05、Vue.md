@@ -3382,6 +3382,10 @@ history 模式
 
 ## Vue-Router 的懒加载如何实现
 
+Vue 路由懒加载是一种优化技术，它允许在需要时按需加载路由组件，而不是在应用程序初始加载时将所有路由组件一次性加载。
+
+要实现路由懒加载，你可以使用 Vue Router 的 `import()` 语法或 Webpack 的动态导入功能。
+
 非懒加载：
 
 ```javascript
@@ -3469,7 +3473,7 @@ const id = route.params.id
 
 在路由跳转时，可以通过 `query` 属性传递参数，如：
 
-```vue
+```js
 this.$router.push({
   path: '/about',
   query: {
