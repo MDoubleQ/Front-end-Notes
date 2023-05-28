@@ -78,7 +78,6 @@ function withSubscription(WrappedComponent, selectData) {
 // 使用
 const BlogPostWithSubscription = withSubscription(BlogPost,
   (DataSource, props) => DataSource.getBlogPost(props.id));
-
 ```
 
 HOC的优缺点∶
@@ -113,8 +112,6 @@ class DataProvider extends React.Components {
 <DataProvider render={data => (
   <h1>Hello {data.name}</h1>
 )}/>
-
-
 ```
 
 由此可以看到，render props的优缺点也很明显∶
@@ -140,7 +137,6 @@ function CommentList(props) {
 }
 // 使用
 <CommentList data='hello' />
-
 ```
 
 以上可以看出，hook解决了hoc的prop覆盖的问题，同时使用的方式解决了render props的嵌套地狱的问题。hook的优点如下∶
@@ -881,7 +877,6 @@ ReactComponent.prototype.setState = function (partialState, callback) {
     this.updater.enqueueCallback(this, callback, 'setState');
   }
 };
-
 ```
 
 - `enqueueSetState` 方法将新的 `state` 放进组件的状态队列里，并调用 `enqueueUpdate` 来处理将要更新的实例对象；
@@ -960,7 +955,6 @@ this.setState({
                                          合并 state，[count+1的任务]
                                           ↓
                                          执行 count+1的任务
-
 ```
 
 需要注意的是，只要同步代码还在执行，“攒起来”这个动作就不会停止。（注：这里之所以多次 +1 最终只有一次生效，是因为在同一个方法中多次 setState 的合并动作不是单纯地将更新累加。比如这里对于相同属性的设置，React 只会为其保留最后一次的更新）。
@@ -1247,7 +1241,6 @@ constructor(props) {
 
 ```javascript
 static getDerivedStateFromProps(props, state)
-
 ```
 
 这是个静态方法，所以不能在这个函数里使用 `this`，有两个参数 `props` 和 `state`，分别指接收到的新参数和当前组件的 `state` 对象，这个函数会返回一个对象用来更新当前的 `state` 对象，如果不需要更新可以返回 `null`。
@@ -1773,12 +1766,12 @@ class Parent extends Component {
 
 ### 5. 组件通信的方式有哪些
 
-- **⽗组件向⼦组件通讯**: ⽗组件可以向⼦组件通过传 props 的⽅式，向⼦组件进⾏通讯
-- **⼦组件向⽗组件通讯**: props+回调的⽅式，⽗组件向⼦组件传递props进⾏通讯，此props为作⽤域为⽗组件⾃身的函 数，⼦组件调⽤该函数，将⼦组件想要传递的信息，作为参数，传递到⽗组件的作⽤域中
-- **兄弟组件通信**: 找到这两个兄弟节点共同的⽗节点,结合上⾯两种⽅式由⽗节点转发信息进⾏通信
-- **跨层级通信**: Context 设计⽬的是为了共享那些对于⼀个组件树⽽⾔是“全局”的数据，例如当前认证的⽤户、主题或⾸选语⾔，对于跨越多层的全局数据通过 Context 通信再适合不过
-- **发布订阅模式**: 发布者发布事件，订阅者监听事件并做出反应,我们可以通过引⼊event模块进⾏通信
-- **全局状态管理⼯具**: 借助Redux或者Mobx等全局状态管理⼯具进⾏通信,这种⼯具会维护⼀个全局状态中⼼Store,并根据不同的事件产⽣新的状态
+- **父组件向子组件通讯**: 父组件可以向子组件通过传 props 的方式，向子组件进行通讯
+- **子组件向父组件通讯**: props+回调的方式，父组件向子组件传递props进行通讯，此props为作⽤域为父组件⾃身的函 数，子组件调⽤该函数，将子组件想要传递的信息，作为参数，传递到父组件的作⽤域中
+- **兄弟组件通信**: 找到这两个兄弟节点共同的父节点,结合上面两种方式由父节点转发信息进行通信
+- **跨层级通信**: Context 设计目的是为了共享那些对于⼀个组件树而言是“全局”的数据，例如当前认证的⽤户、主题或首选语言，对于跨越多层的全局数据通过 Context 通信再适合不过
+- **发布订阅模式**: 发布者发布事件，订阅者监听事件并做出反应,我们可以通过引入event模块进行通信
+- **全局状态管理⼯具**: 借助Redux或者Mobx等全局状态管理⼯具进行通信,这种⼯具会维护⼀个全局状态中⼼Store,并根据不同的事件产⽣新的状态
 
 ## 五、路由
 
@@ -2181,20 +2174,20 @@ export default function createStore(reducer, initialState, middleFunc) {
 
 ### 3. Redux 中异步的请求怎么处理
 
-可以在 componentDidmount 中直接进⾏请求⽆须借助redux。但是在⼀定规模的项⽬中,上述⽅法很难进⾏异步流的管理,通常情况下我们会借助redux的异步中间件进⾏异步处理。redux异步流中间件其实有很多，当下主流的异步中间件有两种redux-thunk、redux-saga。
+可以在 componentDidmount 中直接进行请求⽆须借助redux。但是在⼀定规模的项目中,上述方法很难进行异步流的管理,通常情况下我们会借助redux的异步中间件进行异步处理。redux异步流中间件其实有很多，当下主流的异步中间件有两种redux-thunk、redux-saga。
 
 **（1）使用react-thunk中间件**
 
 **redux-thunk**优点:
 
-- 体积⼩: redux-thunk的实现⽅式很简单,只有不到20⾏代码
-- 使⽤简单: redux-thunk没有引⼊像redux-saga或者redux-observable额外的范式,上⼿简单
+- 体积⼩: redux-thunk的实现方式很简单,只有不到20行代码
+- 使⽤简单: redux-thunk没有引入像redux-saga或者redux-observable额外的范式,上⼿简单
 
 **redux-thunk**缺陷:
 
-- 样板代码过多: 与redux本身⼀样,通常⼀个请求需要⼤量的代码,⽽且很多都是重复性质的
-- 耦合严重: 异步操作与redux的action偶合在⼀起,不⽅便管理
-- 功能孱弱: 有⼀些实际开发中常⽤的功能需要⾃⼰进⾏封装
+- 样板代码过多: 与redux本身⼀样,通常⼀个请求需要⼤量的代码,而且很多都是重复性质的
+- 耦合严重: 异步操作与redux的action偶合在⼀起,不方便管理
+- 功能孱弱: 有⼀些实际开发中常⽤的功能需要⾃⼰进行封装
 
 使用步骤：
 
@@ -2253,17 +2246,17 @@ componentDidMount(){
 **redux-saga**优点:
 
 - 异步解耦: 异步操作被被转移到单独 saga.js 中，不再是掺杂在 action.js 或 component.js 中
-- action摆脱thunk function: dispatch 的参数依然是⼀个纯粹的 action (FSA)，⽽不是充满 “⿊魔法” thunk function
+- action摆脱thunk function: dispatch 的参数依然是⼀个纯粹的 action (FSA)，而不是充满 “⿊魔法” thunk function
 - 异常处理: 受益于 generator function 的 saga 实现，代码异常/请求失败 都可以直接通过 try/catch 语法直接捕获处理
 - 功能强⼤: redux-saga提供了⼤量的Saga 辅助函数和Effect 创建器供开发者使⽤,开发者⽆须封装或者简单封装即可使⽤
-- 灵活: redux-saga可以将多个Saga可以串⾏/并⾏组合起来,形成⼀个⾮常实⽤的异步flow
-- 易测试，提供了各种case的测试⽅案，包括mock task，分⽀覆盖等等
+- 灵活: redux-saga可以将多个Saga可以串行/并行组合起来,形成⼀个⾮常实⽤的异步flow
+- 易测试，提供了各种case的测试方案，包括mock task，分⽀覆盖等等
 
 **redux-saga**缺陷:
 
-- 额外的学习成本: redux-saga不仅在使⽤难以理解的 generator function,⽽且有数⼗个API,学习成本远超redux-thunk,最重要的是你的额外学习成本是只服务于这个库的,与redux-observable不同,redux-observable虽然也有额外学习成本但是背后是rxjs和⼀整套思想
-- 体积庞⼤: 体积略⼤,代码近2000⾏，min版25KB左右
-- 功能过剩: 实际上并发控制等功能很难⽤到,但是我们依然需要引⼊这些代码
+- 额外的学习成本: redux-saga不仅在使⽤难以理解的 generator function,而且有数⼗个API,学习成本远超redux-thunk,最重要的是你的额外学习成本是只服务于这个库的,与redux-observable不同,redux-observable虽然也有额外学习成本但是背后是rxjs和⼀整套思想
+- 体积庞⼤: 体积略⼤,代码近2000行，min版25KB左右
+- 功能过剩: 实际上并发控制等功能很难⽤到,但是我们依然需要引入这些代码
 - ts⽀持不友好: yield⽆法返回TS类型
 
 redux-saga可以捕获action，然后执行一个函数，那么可以把异步代码放在这个函数中，使用步骤如下：
