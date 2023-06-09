@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md",
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md"
+                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md"
               }
             }
           }
@@ -135,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 485.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,6 +150,10 @@
   },
   "active": "e06759e0060d4f86",
   "lastOpenFiles": [
+    "📑FrontEnd 其他资料/人保/~$22考试总结（全）（DQ）.docx",
+    "📑FrontEnd 其他资料/人保/~WRL3924.tmp",
+    "📑FrontEnd 其他资料/人保/~WRD3897.tmp",
+    "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md",
     "💡FrontEnd 知识卡片/013、React.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/06-React中CSS使用方案-Redux介绍和使用.md",
@@ -159,7 +163,6 @@
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/04-setState原理-性能优化-ref-受控组件.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/02-JSX语法-事件绑定-列表渲染-购物车-脚手架.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/03-函数组件-组件生命周期-嵌套-通信-插槽-上下文.md",
-    "💡FrontEnd 知识卡片/013-2、React（From-掘金）.md",
     "💻FrontEnd 项目实战/002_Trip/实战-Trip.pdf",
     "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React",
@@ -172,12 +175,10 @@
     "FrontEnd 课堂笔记（CoderWhy）",
     "CoderWhy课堂笔记/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "CoderWhy课堂笔记/09_React",
-    "CoderWhy课堂笔记",
     "未命名.md",
     "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
     "Excalidraw/Drawing 2023-05-22 16.16.45.excalidraw.md",
     "Excalidraw/Drawing 2023-05-22 16.16.35.excalidraw.md",
-    "Excalidraw",
     "💡FrontEnd 知识卡片/02、CSS.md",
     "📕FrontEnd 读书笔记/001、javaScript高级程序设计（第四版）——马特·弗里斯比/javaScript高级程序设计（第四版）.md",
     "💡FrontEnd 知识卡片/05、Vue.md",
@@ -185,7 +186,6 @@
     "🌐FrontEnd 文章收集/02、JavaScript/009、ES6~ES12的常用新特性.md",
     "🌐FrontEnd 文章收集/02、JavaScript/003、进击的 JavaScript（三）之 函数执行过程.md",
     "💻FrontEnd 项目实战/001_DoubleQ-后台管理系统/项目搭建和接口文档.md",
-    "💻FrontEnd 项目实战/001_DoubleQ-后台管理系统/项目笔记.md",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson06-skill_pattern/img/weibo.jpg",
     "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.assets/image-20221031101039497.png",
     "📑FrontEnd 其他资料/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
