@@ -8,19 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e06759e0060d4f86",
+            "id": "77b3906216b567af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
+                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
                 "mode": "preview",
                 "source": false
               }
             }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
+                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
+                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💡FrontEnd 知识卡片/04、JavaScript（高级）.md"
+                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md"
               }
             }
           }
@@ -148,8 +147,12 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "e06759e0060d4f86",
+  "active": "77b3906216b567af",
   "lastOpenFiles": [
+    "📑FrontEnd 其他资料/人保/~WRL0255.tmp",
+    "📑FrontEnd 其他资料/人保/~WRD0235.tmp",
+    "📑FrontEnd 其他资料/人保/~WRL3184.tmp",
+    "📑FrontEnd 其他资料/人保/~WRD3168.tmp",
     "📑FrontEnd 其他资料/人保/~$22考试总结（全）（DQ）.docx",
     "📑FrontEnd 其他资料/人保/~WRL3924.tmp",
     "📑FrontEnd 其他资料/人保/~WRD3897.tmp",
@@ -169,12 +172,8 @@
     "📙FrontEnd 课堂笔记（CoderWhy）",
     "📙 FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "📙 FrontEnd 课堂笔记（CoderWhy）/09_React",
-    "📙 FrontEnd 课堂笔记（CoderWhy）",
     "FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
-    "FrontEnd 课堂笔记（CoderWhy）/09_React",
-    "FrontEnd 课堂笔记（CoderWhy）",
     "CoderWhy课堂笔记/09_React/01-React介绍-特点-基本使用-JSX语法.md",
-    "CoderWhy课堂笔记/09_React",
     "未命名.md",
     "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
     "Excalidraw/Drawing 2023-05-22 16.16.45.excalidraw.md",
