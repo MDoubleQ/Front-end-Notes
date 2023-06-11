@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
+                "file": "📑FrontEnd 其他资料/人保/考试.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
+                "file": "📑FrontEnd 其他资料/人保/考试.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
+                "file": "📑FrontEnd 其他资料/人保/考试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md"
+                "file": "📑FrontEnd 其他资料/人保/考试.md"
               }
             }
           }
@@ -134,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 485.5
+    "width": 312.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,6 +149,7 @@
   },
   "active": "77b3906216b567af",
   "lastOpenFiles": [
+    "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
     "📑FrontEnd 其他资料/人保/~WRL0761.tmp",
     "📑FrontEnd 其他资料/人保/~WRD0746.tmp",
     "📑FrontEnd 其他资料/人保/~WRL0255.tmp",
@@ -170,12 +171,10 @@
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/03-函数组件-组件生命周期-嵌套-通信-插槽-上下文.md",
     "💻FrontEnd 项目实战/002_Trip/实战-Trip.pdf",
     "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
-    "📙FrontEnd 课堂笔记（CoderWhy）/09_React",
     "📙 FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "CoderWhy课堂笔记/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "未命名.md",
-    "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
     "Excalidraw/Drawing 2023-05-22 16.16.45.excalidraw.md",
     "Excalidraw/Drawing 2023-05-22 16.16.35.excalidraw.md",
     "💡FrontEnd 知识卡片/02、CSS.md",
