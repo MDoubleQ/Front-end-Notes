@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试.md",
+                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.5004348754883
+    "width": 256.5004348754883,
+    "collapsed": true
   },
   "right": {
     "id": "618886454cad85f2",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试.md",
+                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试.md",
+                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试.md"
+                "file": "📑FrontEnd 其他资料/人保/考试题目.md"
               }
             }
           }
@@ -134,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5
+    "width": 909.5
   },
   "left-ribbon": {
     "hiddenItems": {
