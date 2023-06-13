@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
+                "file": "阶段系统学习内容.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.5004348754883,
-    "collapsed": true
+    "width": 256.5004348754883
   },
   "right": {
     "id": "618886454cad85f2",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
+                "file": "阶段系统学习内容.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试题目.md",
+                "file": "阶段系统学习内容.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📑FrontEnd 其他资料/人保/考试题目.md"
+                "file": "阶段系统学习内容.md"
               }
             }
           }
@@ -135,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 909.5
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,6 +149,13 @@
   },
   "active": "77b3906216b567af",
   "lastOpenFiles": [
+    "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript 设计模式总结及实例代码演示.md",
+    "🔲FrontEnd Whiteboard/堆内存、栈内存.md",
+    "🧠FrontEnd 思维导图/08_Git与Github/Git三区图示.png",
+    "📙FrontEnd 课堂笔记（CoderWhy）/09_React/02-JSX语法-事件绑定-列表渲染-购物车-脚手架.md",
+    "📑FrontEnd 其他资料/印客学院/第八部分： 复习篇（印客学院）.pdf",
+    "📑FrontEnd 其他资料/人保/考试题目.md",
     "💡FrontEnd 知识卡片/02.2、CSS（From-掘金）.md",
     "📑FrontEnd 其他资料/人保/~WRL0761.tmp",
     "📑FrontEnd 其他资料/人保/~WRD0746.tmp",
@@ -165,12 +171,8 @@
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/06-React中CSS使用方案-Redux介绍和使用.md",
     "💡FrontEnd 知识卡片/03、JavaScript（基础）.md",
-    "📕FrontEnd 读书笔记/002、ES6标准入门——阮一峰/ECMAScript 6入门（第三版）.md",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/JavaScript 设计模式总结及实例代码演示.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/04-setState原理-性能优化-ref-受控组件.md",
-    "📙FrontEnd 课堂笔记（CoderWhy）/09_React/02-JSX语法-事件绑定-列表渲染-购物车-脚手架.md",
     "📙FrontEnd 课堂笔记（CoderWhy）/09_React/03-函数组件-组件生命周期-嵌套-通信-插槽-上下文.md",
-    "💻FrontEnd 项目实战/002_Trip/实战-Trip.pdf",
     "💡FrontEnd 知识卡片/04、JavaScript（高级）.md",
     "📙 FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
     "FrontEnd 课堂笔记（CoderWhy）/09_React/01-React介绍-特点-基本使用-JSX语法.md",
@@ -184,7 +186,6 @@
     "📑FrontEnd 其他资料/人保/2022考试总结.md",
     "🌐FrontEnd 文章收集/02、JavaScript/009、ES6~ES12的常用新特性.md",
     "🌐FrontEnd 文章收集/02、JavaScript/003、进击的 JavaScript（三）之 函数执行过程.md",
-    "💻FrontEnd 项目实战/001_DoubleQ-后台管理系统/项目搭建和接口文档.md",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson06-skill_pattern/img/weibo.jpg",
     "📑FrontEnd 其他资料/2023_05_11_设计模式资料（千峰）/笔记/笔记.assets/image-20221031101039497.png",
     "📑FrontEnd 其他资料/04_JS设计模式资料（2023_05_11）/笔记/笔记.assets/image-20221031101039497.png",
@@ -194,7 +195,6 @@
     "未命名.canvas",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv_img.jpeg",
     "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tv.png",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie_img.jpeg",
-    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie.png"
+    "📕FrontEnd 读书笔记/003、JavaScript设计模式——张荣铭/javascript-Pattern-master/lesson07-architecture_pattern/common/img/left_tie_img.jpeg"
   ]
 }
